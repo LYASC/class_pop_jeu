@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    background-image: url("../image/fongameover.png");
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* Aligne les éléments verticalement */
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 60%;
+    max-width: 800px;
+    /* Limite la largeur maximale de l'image */
+    animation: gameover-animation 0.7s ease-out;
+    transform: rotate(10deg);
+    margin-bottom: 20px;
+    /* Espace entre l'image et le bouton */
+}
+
+#replay-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #B21212;
+    /* Couleur de fond du bouton */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    /* Met les lettres en majuscules */
+    margin-top: 20px;
+    /* Espace au-dessus du bouton */
+}
+
+#replay-button:hover {
+    background-color: #A10F0F;
+    /* Couleur du bouton au survol */
+    transform: scale(1.05);
+    /* Agrandit légèrement le bouton au survol */
+}
+
+@keyframes gameover-animation {
+    0% {
+        width: 300%;
+        opacity: 0;
+        transform: rotate(-155deg);
+    }
+
+    100% {
+        width: 60%;
+        opacity: 1;
+        transform: rotate(10deg);
+    }
+}

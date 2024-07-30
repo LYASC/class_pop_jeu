@@ -1,0 +1,99 @@
+/* Styles pour l'en-tête */
+header {
+    font-size: 19px;
+    display: flex;
+    justify-content: space-between;
+    /* Espacement uniforme entre les éléments */
+    align-items: center;
+    background-color: #B21212;
+    padding: 10px 20px;
+    /* Espacement intérieur pour éviter que le contenu touche les bords */
+}
+
+/* Styles pour le corps de la page */
+body {
+    margin: 0;
+    background-image: url("../image/fond.png");
+    background-size: cover;
+    height: 100vh;
+}
+
+/* Styles pour le plateau de jeu */
+#board {
+    height: 100vh;
+}
+
+/* Styles pour les éléments de texte */
+p {
+    color: azure;
+    margin: 0;
+    /* Supprime les marges par défaut */
+}
+
+/* Styles pour le texte des vies */
+.coeur>p {
+    font-size: 20px;
+    color: rgb(240, 182, 192);
+}
+
+/* Styles pour les têtes */
+.tete {
+    width: 130px;
+    height: 170px;
+    position: absolute;
+}
+
+.tete-bonus {
+    width: 150px;
+    height: 190px;
+    position: absolute;
+}
+
+.tete-malus {
+    width: 150px;
+    height: 190px;
+    position: absolute;
+}
+
+/* Styles pour les contrôles audio */
+.audio-controls {
+    display: flex;
+    align-items: center;
+}
+
+.audio-controls button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #f3f3f3;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Animation de transition pour les boutons */
+}
+
+.audio-controls button:hover {
+    background-color: #A10F0F;
+}
+
+/* Animations des têtes */
+@keyframes tete-qui-monte {
+    0% {
+        top: 645px;
+    }
+
+    100% {
+        top: -100px;
+    }
+}
+
+@keyframes tete-qui-floute {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
